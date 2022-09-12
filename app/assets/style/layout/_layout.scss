@@ -1,0 +1,86 @@
+
+@mixin mobile {
+  @media (max-width:767px) {
+      @content;
+  }
+  
+}
+
+.header{
+  background:#2D2D2D;
+}
+.headerMenu{
+  
+  ul{
+    li{
+      font-size: 18px;
+      line-height: 90px;
+    }
+  }
+  
+  .material-symbols-outlined{
+    
+    font-size: 20px;
+    margin-right: 4px;
+    vertical-align: text-bottom;
+  }
+  
+}
+
+.logo{
+  img{
+    width: 177px;
+   
+    
+  }
+}
+
+
+.navbar{
+  position: relative;
+  color: $secondary;
+  padding-left: 70px;
+  padding-right: 46px;
+  @include mobile{
+  padding-left: 12px;
+  padding-right: 12px;}
+}
+
+//偽元素//
+
+.navbar::before{
+  content: "";
+  position: absolute;
+  top: 98px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: $secondary;
+}
+
+.navbar::after{
+  content: "";
+  position: absolute;
+  top: 98px;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background-color: $primary;
+}
+
+
+footer{
+  background-color: #2D2D2D;
+}
+
+.footer{
+  p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 67px;
+    color: #909090;
+    @include mobile{
+      font-size: 12px;
+    }
+  }
+}
